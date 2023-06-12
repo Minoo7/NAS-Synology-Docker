@@ -6,7 +6,7 @@ DOCKER_VERSION=20.10.9
 DOCKER_DIR=/volume1/@docker
 
 echo "Downloading docker $DOCKER_VERSION-$ARCH"
-curl "https://download.docker.com/linux/static/stable/$ARCH/docker-$DOCKER_VERSION.tgz" | tar -xz -C /usr/local/bin --strip-components=1
+curl "https://download.docker.com/linux/static/stable/$ARCH/docker-$DOCKER_VERSION.tgz" | /usr/bin/tar -xz -C /usr/local/bin --strip-components=1
 
 echo "Creating docker working directory $DOCKER_DIR"
 mkdir -p "$DOCKER_DIR"
